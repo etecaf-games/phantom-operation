@@ -50,6 +50,7 @@ public class ScrFOV : MonoBehaviour
         
         for (int i = 0; i < targetsInRadius.Length; i++)
         {
+
             Transform target = targetsInRadius[i].transform;
             Vector2 dirTarget = new Vector2(target.position.x - transform.position.x, target.position.y - transform.position.y);
             Vector2 dir = new Vector2();
@@ -63,7 +64,6 @@ public class ScrFOV : MonoBehaviour
                 {
                     visibleTargets.Add(target);
                     Debug.DrawLine(transform.position, target.position, Color.red);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
             }
         }

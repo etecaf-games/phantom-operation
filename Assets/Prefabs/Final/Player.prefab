@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 7684898025220315931}
   - component: {fileID: 2328181373509888754}
   - component: {fileID: 978513640}
+  - component: {fileID: 1185106215}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -280,8 +281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Claridades:
-  - {r: 1, g: 1, b: 1, a: 0.15686275}
-  - {r: 1, g: 1, b: 1, a: 0.39215687}
+  - {r: 1, g: 1, b: 1, a: 0.13725491}
+  - {r: 1, g: 1, b: 1, a: 0.4117647}
   LuzAmbient: {fileID: 0}
   taxaTransicao: 0
   Condicao: 0
@@ -390,3 +391,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1185106215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3694275879812639278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0184ff86886f974d95dfead14754f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MultiplicativeColor: {r: 0, g: 0, b: 0, a: 0.27450982}
+  AdditiveColor: {r: 0, g: 0, b: 0, a: 0}
+  Material: {fileID: 2100000, guid: 0a8c132f813f5514b9f5b48ff3956482, type: 2}
+  LightObstacleScale: 1

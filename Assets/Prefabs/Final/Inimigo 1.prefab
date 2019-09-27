@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 149290690764851557}
   - component: {fileID: 149290690764851567}
   - component: {fileID: 149290690764851560}
+  - component: {fileID: 676415511523667670}
   m_Layer: 0
   m_Name: Inimigo 1
   m_TagString: Untagged
@@ -170,8 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51dfdd2d9229764eb295a241fdd41b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 6
-  viewAngle: 60
+  viewRadius: 5
+  viewAngle: 80
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8192
@@ -199,7 +200,8 @@ MonoBehaviour:
   Moeda: {fileID: 0}
   MoedaVista: 0
   Already: 0
-  viewRadius: 6
+  Rotacionando: 0
+  viewRadius: 5
   viewAngle: 60
   obstacleMask:
     serializedVersion: 2
@@ -361,6 +363,22 @@ MonoBehaviour:
     m_Bits: 256
   targetsInRadius: []
   visibleTargets: []
+--- !u!114 &676415511523667670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149290690764851553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0184ff86886f974d95dfead14754f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MultiplicativeColor: {r: 0, g: 0, b: 0, a: 0.34117648}
+  AdditiveColor: {r: 0, g: 0, b: 0, a: 0}
+  Material: {fileID: 2100000, guid: 0a8c132f813f5514b9f5b48ff3956482, type: 2}
+  LightObstacleScale: 1
 --- !u!1 &2305331509370163252
 GameObject:
   m_ObjectHideFlags: 0

@@ -41,7 +41,7 @@ public class ScrFOVLuzPlayer : MonoBehaviour
                     visibleTargets.Add(target);
                      Debug.DrawLine(transform.position, target.gameObject.transform.position, Color.red);
                     if(VistoLuz && target.gameObject.tag == "Player"){
-                       
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                     }
                 }
             }
