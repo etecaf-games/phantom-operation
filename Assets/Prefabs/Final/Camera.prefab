@@ -255,8 +255,8 @@ MonoBehaviour:
   MoedaVista: 0
   Already: 0
   Rotacionando: 0
-  viewRadius: 7
-  viewAngle: 60
+  viewRadius: 3
+  viewAngle: 45
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8192
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 6160618275624773464}
   m_Layer: 8
   m_Name: Light (1)
-  m_TagString: LuzPlayer
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

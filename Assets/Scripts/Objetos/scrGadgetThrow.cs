@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class scrGadgetThrow : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody2D rbMoeda;
+    public float Pausa;
+
     void Start()
     {
-        
+        rbMoeda = GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+    	rbMoeda.drag = Pausa;
+        rbMoeda.rotation = 0f;
+    }
+    void OnCollisionEnter2D(Collision2D quem)
+    {
+    	if(quem.gameObject.tag == "Player")
+    	{
+    		quem.gameObject.GetComponent<scrInterfaceItens>().Gadgets++;
+    		Destroy(gameObject);
+    	}
     }
 }

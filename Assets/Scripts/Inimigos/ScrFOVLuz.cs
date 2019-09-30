@@ -42,7 +42,6 @@ public class ScrFOVLuz : MonoBehaviour
                 float distanceTarget = Vector2.Distance(transform.position, target.position);
                 if (!Physics2D.Raycast(transform.position, dirTarget, distanceTarget, obstacleMask))
                 {
-                	Debug.DrawLine(transform.position, target.position, Color.red);
                     visibleTargets.Add(target);
                     if(target.gameObject.tag == "LuzPlayer"){
                         Luz = target.gameObject;

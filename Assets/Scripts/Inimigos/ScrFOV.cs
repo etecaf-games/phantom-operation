@@ -64,6 +64,7 @@ public class ScrFOV : MonoBehaviour
                 {
                     visibleTargets.Add(target);
                     Debug.DrawLine(transform.position, target.position, Color.red);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 }
             }
         }

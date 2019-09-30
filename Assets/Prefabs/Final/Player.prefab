@@ -266,8 +266,10 @@ MonoBehaviour:
   Couldown: 1.5
   MoedaVelocidade: 12
   Moeda: {fileID: 4717605102399027610, guid: d3ef844a76a49784abc94b82505905cb, type: 3}
+  Gadget: {fileID: 6058838923644393089, guid: bf77f8521b3ada04386554245fa9b080, type: 3}
   Incio: {fileID: 3694275878233030445}
   Moedas: 10
+  Gadgets: 0
 --- !u!114 &3694275879812639318
 MonoBehaviour:
   m_ObjectHideFlags: 0

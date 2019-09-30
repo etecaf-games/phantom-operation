@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class scrGadget : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void OnCollisionEnter2D(Collision2D quem)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    	if(quem.gameObject.tag == "Player")
+    	{
+    		quem.gameObject.GetComponent<scrInterfaceItens>().Gadgets++;
+    		Destroy(gameObject);
+    	}
     }
 }

@@ -201,8 +201,8 @@ MonoBehaviour:
   MoedaVista: 0
   Already: 0
   Rotacionando: 0
-  viewRadius: 5
-  viewAngle: 60
+  viewRadius: 4
+  viewAngle: 45
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8192
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c113d1f9c94726e43b760d98deb76a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 13
+  viewRadius: 12
   viewAngle: 100
   obstacleMask:
     serializedVersion: 2
