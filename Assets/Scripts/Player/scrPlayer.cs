@@ -6,11 +6,12 @@ public class scrPlayer : MonoBehaviour
 {   
     #region Variaveis de Ativação de Luz
 
+    public int barras;
     public bool Andando;
     public bool InputadoLuz;
     public bool Acesa;
     public float couldownIncialLuz;
-    public float couldownLuz;
+    public float couldownLuz, DuraçãoLuz, TempoLuz;
     public GameObject Lanterna;
     Animator AnimPlayer;
 
@@ -24,6 +25,7 @@ public class scrPlayer : MonoBehaviour
 
     void Start()
     {
+        TempoLuz = DuraçãoLuz;
     	Acesa = true;
         AnimPlayer = GetComponent<Animator>();
     }
@@ -73,7 +75,24 @@ public class scrPlayer : MonoBehaviour
             couldownLuz = couldownIncialLuz;
         	Acesa = !Acesa;
         	Lanterna.SetActive(Acesa);
+        }
 
+        if(Acesa){
+            if(barras <= 0){
+                InputadoLuz = true;
+                couldownLuz = couldownIncialLuz;
+                Acesa = !Acesa;
+                Lanterna.SetActive(Acesa);
+            }
+            else{
+                if(TempoLuz <= 0){
+                    barras--;
+                    TempoLuz = DuraçãoLuz;
+                }
+                else{
+                    TempoLuz -= Time.deltaTime;
+                }
+            }
         }
 
         if(couldownLuz > 0)

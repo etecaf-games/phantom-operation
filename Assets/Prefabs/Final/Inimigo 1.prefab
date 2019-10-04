@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 149290690764851557}
   - component: {fileID: 149290690764851567}
   - component: {fileID: 149290690764851560}
+  - component: {fileID: 1771020249381370455}
   - component: {fileID: 676415511523667670}
   m_Layer: 0
   m_Name: Inimigo 1
@@ -250,6 +251,10 @@ MonoBehaviour:
   "posi\xE7\xF5es":
   - {fileID: 0}
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   LocalCoin: {x: 0, y: 0, z: 0}
 --- !u!212 &149290690764851561
 SpriteRenderer:
@@ -331,7 +336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c113d1f9c94726e43b760d98deb76a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 12
+  viewRadius: 15
   viewAngle: 100
   obstacleMask:
     serializedVersion: 2
@@ -361,6 +366,38 @@ MonoBehaviour:
   detectionMask:
     serializedVersion: 2
     m_Bits: 256
+  targetsInRadius: []
+  visibleTargets: []
+--- !u!114 &1771020249381370455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149290690764851553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0360f7181e81ac24ea44fa0a3f9cd595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rodado: 0
+  AlreadyGet: 0
+  AlreadyAcesa: 0
+  Active: 0
+  rotationIF: 0
+  anguloIF: 0
+  z: 0
+  "Dura\xE7\xE3oRot": 5
+  lerp: 0
+  Couldown: 5
+  viewRadius: 4
+  viewAngle: 200
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  detectionMask:
+    serializedVersion: 2
+    m_Bits: 4096
   targetsInRadius: []
   visibleTargets: []
 --- !u!114 &676415511523667670

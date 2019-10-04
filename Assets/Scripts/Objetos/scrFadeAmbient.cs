@@ -7,6 +7,7 @@ public class scrFadeAmbient : MonoBehaviour
 	scrPlayer scriptPlayer;
 	public Color[] Claridades;
 	public SpriteRenderer LuzAmbient;
+    public GameObject LuzFOVPlayer;
 	scrPlayer ScriptLuz;
 	public float taxaTransicao;
 	public bool Condicao;
@@ -45,6 +46,7 @@ public class scrFadeAmbient : MonoBehaviour
 
         }
         LuzAmbient.color = Color.Lerp(Claridades[0], Claridades[1], taxaTransicao);
+        LuzFOVPlayer.SetActive(false);
         taxaTransicao += 0.05f;
 
     }
@@ -56,6 +58,7 @@ public class scrFadeAmbient : MonoBehaviour
             CancelInvoke("Clarear");
         }
         LuzAmbient.color = Color.Lerp(Claridades[1], Claridades[0], taxaTransicao);
+        LuzFOVPlayer.SetActive(true);
         taxaTransicao += 0.05f;
     }
 

@@ -38,22 +38,6 @@ public class scrPatrulha : MonoBehaviour
 			Tempo = CouldDown;
     	}
     	AnimEnemy.SetBool("Andando", Andando);
-		/*else
-		{
-			if(!CoinAt){
-				transform.position = Vector2.MoveTowards(transform.position, LocalCoin, Velocidade * Time.deltaTime);
-				if(Vector2.Distance(transform.position, LocalCoin) > 2f){
-					CoinAt = true;
-				}
-			}
-			else
-			{
-				Tempo -= Time.deltaTime;
-				if(Tempo < 0.2f){
-					FollowCoin = false;
-				}
-			}
-		}*/
 	}
 	public void Move(Vector3 Destino){
 		transform.position = Vector2.MoveTowards(transform.position, Destino, Velocidade * Time.deltaTime);

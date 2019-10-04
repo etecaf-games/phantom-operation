@@ -16,5 +16,8 @@ public class scrLaser : MonoBehaviour
             Destroy(quem.gameObject);
             Destroy(gameObject);
         }
+        if(quem.gameObject.tag == "Batery"){
+            Destroy(quem.gameObject);
+        }
     }
 }
