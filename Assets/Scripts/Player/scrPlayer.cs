@@ -6,6 +6,7 @@ public class scrPlayer : MonoBehaviour
 {   
     #region Variaveis de Ativação de Luz
 
+    public AudioSource ClickLanterna;
     public int barras;
     public bool Andando;
     public bool InputadoLuz;
@@ -75,6 +76,7 @@ public class scrPlayer : MonoBehaviour
             couldownLuz = couldownIncialLuz;
         	Acesa = !Acesa;
         	Lanterna.SetActive(Acesa);
+            ClickLanterna.Play();
         }
 
         if(Acesa){

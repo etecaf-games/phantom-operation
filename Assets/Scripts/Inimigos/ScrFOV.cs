@@ -20,9 +20,11 @@ public class ScrFOV : MonoBehaviour
 
     Vector3 PosFut;
 
+    public AudioSource Taunt1;
+
     public GameObject Moeda;
 
-    public bool MoedaVista, Already, Rotacionando;
+    public bool MoedaVista, Already, Rotacionando, TauntVisto;
 
     public float viewRadius = 5;
 
@@ -64,13 +66,17 @@ public class ScrFOV : MonoBehaviour
                 {
                     visibleTargets.Add(target);
                     Debug.DrawLine(transform.position, target.position, Color.red);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                    Debug.Log("Pego");
                 }
             }
         }
     }
 
     public void MoedaFound(){
+            if(!TauntVisto){
+                Taunt1.Play();
+                TauntVisto = true;
+            }
             GetComponent<scrRotation>().enabled = false;
             GetComponent<scrPatrulha>().enabled = false;
             Transform[] positions = GetComponent<scrPatrulha>().posições;
@@ -108,6 +114,7 @@ public class ScrFOV : MonoBehaviour
                 if(anguloIF == rotationIF){
                     if(Moeda != null){
                         Destroy(Moeda);
+                        TauntVisto = false;
                     }
                     MoedaVista = false;
                     Already = false;

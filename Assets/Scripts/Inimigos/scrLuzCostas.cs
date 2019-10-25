@@ -102,12 +102,11 @@ public class scrLuzCostas : MonoBehaviour
                     }
                 }
                 else{
-                    if(!AlreadyGet){
+                    if(GameObject.Find("Player").GetComponent<scrPlayer>().Acesa && targetsInRadius.Length > 0){
                         PosFut = GameObject.Find("Player").transform.position;
                         PosFut.z = 5f;
                         PosFut.x -= transform.position.x;
                         PosFut.y -= transform.position.y;
-                        AlreadyGet = true;
                     }
                     angulo = Mathf.Atan2(PosFut.y, PosFut.x) * Mathf.Rad2Deg;
                     rotationIF = float.Parse(rbEnemy.rotation.ToString("N4"));
@@ -126,8 +125,6 @@ public class scrLuzCostas : MonoBehaviour
             }
         }
     }
-
-    //public
 
     public Vector2 DirFromAngle(float angleDeg, bool global)
     {

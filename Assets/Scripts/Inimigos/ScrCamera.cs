@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ScrCamera : MonoBehaviour
 {
-    public float velocidadeRot = 1.5f;
+    public float velocidadeRot = 1.5f, radius;
     Rigidbody2D rbEnemy;
     int index = 0;
     public GameObject[] Limites;
@@ -26,6 +26,12 @@ public class ScrCamera : MonoBehaviour
             if(index >= Limites.Length){
             	index = 0;
             }
+        }
+        if(Vector2.Distance(GameObject.FindGameObjectWithTag("Player").transform.position, transform.position) <= radius){
+            GetComponent<AudioSource>().mute = false;
+        }
+        else{
+            GetComponent<AudioSource>().mute = true;
         }
     }
     public void Rotação(float angulo){
