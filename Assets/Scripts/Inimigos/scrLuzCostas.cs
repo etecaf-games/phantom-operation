@@ -30,7 +30,7 @@ public class scrLuzCostas : MonoBehaviour
     	AnimEnemy = GetComponent<Animator>();
     }
     
-    private void Update()
+    private void FixedUpdate()
     {        
         FindVisibleTargets();
     }

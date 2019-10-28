@@ -365,7 +365,6 @@ GameObject:
   - component: {fileID: 2328181373509888754}
   - component: {fileID: 978513640}
   - component: {fileID: 1185106215}
-  - component: {fileID: 739551654}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -388,6 +387,7 @@ Transform:
   - {fileID: 3694275878233030444}
   - {fileID: 397763974}
   - {fileID: 186100929}
+  - {fileID: 380447111752412261}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -424,14 +424,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2971f1189d4404fa6cd1b7a79524a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickLanterna: {fileID: 739551654}
+  ClickLanterna: {fileID: 7435816541159423892}
   barras: 5
   Andando: 0
   InputadoLuz: 0
   Acesa: 1
   couldownIncialLuz: 3
   couldownLuz: 0
-  "Dura\xE7\xE3oLuz": 84
+  "Dura\xE7\xE3oLuz": 60
   TempoLuz: 0
   Lanterna: {fileID: 3694275879084617504}
   Velocidade: 4.5
@@ -609,13 +609,44 @@ MonoBehaviour:
   AdditiveColor: {r: 0, g: 0, b: 0, a: 0}
   Material: {fileID: 2100000, guid: 0a8c132f813f5514b9f5b48ff3956482, type: 2}
   LightObstacleScale: 1
---- !u!82 &739551654
+--- !u!1 &7975252483519180594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 380447111752412261}
+  - component: {fileID: 7435816541159423892}
+  m_Layer: 12
+  m_Name: Lanterna
+  m_TagString: Effects
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &380447111752412261
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7975252483519180594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3694275879812639317}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &7435816541159423892
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3694275879812639278}
+  m_GameObject: {fileID: 7975252483519180594}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -629,8 +660,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 0.2245501
-  MaxDistance: 500
+  MinDistance: 1.0971515
+  MaxDistance: 11.891602
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

@@ -16,7 +16,7 @@ public class ScrFOVLuzPlayer : MonoBehaviour
 
     public bool VistoLuz;
     
-    private void Update()
+    private void FixedUpdate()
     {
         FindVisibleTargets();
     }
@@ -41,7 +41,10 @@ public class ScrFOVLuzPlayer : MonoBehaviour
                     visibleTargets.Add(target);
                      Debug.DrawLine(transform.position, target.gameObject.transform.position, Color.red);
                     if(VistoLuz && target.gameObject.tag == "Player"){
-                        Debug.Log("Pego");
+                        GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Sender = this.gameObject;
+                        GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Death = true;
+                        GetComponent<scrPatrulha>().enabled = false;
+                        GetComponent<scrFoundPlayer>().enabled = true;
                     }
                 }
             }

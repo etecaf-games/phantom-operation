@@ -9,6 +9,8 @@ TagManager:
   - Achiviment
   - Gadget
   - Batery
+  - Effects
+  - DeathManager
   layers:
   - Default
   - TransparentFX

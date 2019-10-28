@@ -14,7 +14,7 @@ public class ScrFOVMoeda : MonoBehaviour
 
     public List<Transform> visibleTargets = new List<Transform>();
 
-    private void Update()
+    private void FixedUpdate()
     {
         FindVisibleTargets();
     }

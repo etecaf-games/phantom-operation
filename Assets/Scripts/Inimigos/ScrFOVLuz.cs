@@ -18,7 +18,7 @@ public class ScrFOVLuz : MonoBehaviour
     	ScriptPlayer = GetComponent<ScrFOVLuzPlayer>();
     }
     
-    private void Update()
+    private void FixedUpdate()
     {
         FindVisibleTargets();
 

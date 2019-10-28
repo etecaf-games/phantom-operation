@@ -11,7 +11,7 @@ public class scrArmario : MonoBehaviour
     {
         animArmario = GetComponent<Animator>();
     }
-    void Update()
+    void FixedUpdate()
     {
         if(Input.GetKeyDown(KeyCode.E) && Entrou && !Animado){
             Resgatado = true;

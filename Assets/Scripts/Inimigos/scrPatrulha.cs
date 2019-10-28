@@ -9,7 +9,7 @@ public class scrPatrulha : MonoBehaviour
 	bool CoinAt;
 	float Tempo;
 	Rigidbody2D rbEnemy;
-	public bool Mover;
+	public bool Mover, FoundEnemy;
 	public float Velocidade;
 	public int Local;
 	public Transform[] posições;
@@ -32,12 +32,14 @@ public class scrPatrulha : MonoBehaviour
 
     void FixedUpdate()
     {
-		if(!FollowCoin){
-			Vector3 LocalDestino = posições[Local].position;
-			Move(LocalDestino);
-			Tempo = CouldDown;
-    	}
-    	AnimEnemy.SetBool("Andando", Andando);
+		if(!FoundEnemy){
+			if(!FollowCoin){
+				Vector3 LocalDestino = posições[Local].position;
+				Move(LocalDestino);
+				Tempo = CouldDown;
+			}
+			AnimEnemy.SetBool("Andando", Andando);
+		}
 	}
 	public void Move(Vector3 Destino){
 		transform.position = Vector2.MoveTowards(transform.position, Destino, Velocidade * Time.deltaTime);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class scrBattery : MonoBehaviour
 {
-    void Update()
+    void FixedUpdate()
     {
         GetComponent<Animator>().SetInteger("State", GameObject.FindGameObjectWithTag("Player").GetComponent<scrPlayer>().barras);
     }

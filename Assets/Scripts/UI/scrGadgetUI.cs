@@ -5,7 +5,7 @@ using TMPro;
 
 public class scrGadgetUI : MonoBehaviour
 {
-    void Update()
+    void FixedUpdate()
     {
        GetComponent<TextMeshProUGUI>().text = GameObject.FindGameObjectWithTag("Player").GetComponent<scrInterfaceItens>().Gadgets.ToString();
     }

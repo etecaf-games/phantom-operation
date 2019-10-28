@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61930e16e81db5c43a4ecc22422a0953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Color: {r: 1, g: 1, b: 1, a: 0.78431374}
+  Color: {r: 1, g: 1, b: 1, a: 0.5882353}
   Sprite: {fileID: 21300000, guid: 598b33f5951947c45b7882984e004277, type: 3}
   SortingOrder: 0
   Material: {fileID: 2100000, guid: eba84647c4f5b25448790591a30ca17e, type: 2}
@@ -106,6 +106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 149290690764851552}
   - component: {fileID: 149290690764851558}
+  - component: {fileID: 2784535033722913699}
   - component: {fileID: 149290690764851562}
   - component: {fileID: 149290690764851563}
   - component: {fileID: 149290690764851556}
@@ -161,6 +162,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2784535033722913699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149290690764851553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc125ae0acaa8e14693adead273606d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  z: 0
+  "Dura\xE7\xE3oRot": 2
+  lerp: 0
+  "DestinoVis\xE3o": 0
 --- !u!114 &149290690764851562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149290690764851553}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73721aeeac8249544a982cb969adfbea, type: 3}
   m_Name: 
@@ -249,6 +266,7 @@ MonoBehaviour:
   FollowCoin: 0
   Andando: 0
   Mover: 0
+  FoundEnemy: 0
   Velocidade: 3
   Local: 0
   "posi\xE7\xF5es":

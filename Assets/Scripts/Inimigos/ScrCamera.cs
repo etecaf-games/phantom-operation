@@ -10,7 +10,7 @@ public class ScrCamera : MonoBehaviour
     public GameObject[] Limites;
     float angulo, z, lerp, rotationIF, anguloIF;
 
-	void Update () {
+	void FixedUpdate () {
 		rbEnemy = GetComponent<Rigidbody2D>();
         Vector3 PosFut = Limites[index].transform.position;
         PosFut.z = 5f;

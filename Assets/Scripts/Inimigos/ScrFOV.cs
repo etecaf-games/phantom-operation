@@ -36,7 +36,7 @@ public class ScrFOV : MonoBehaviour
 
     public List<Transform> visibleTargets = new List<Transform>();
 
-    private void Update()
+    private void FixedUpdate()
     {
         if(MoedaVista){
             MoedaFound();
@@ -66,7 +66,10 @@ public class ScrFOV : MonoBehaviour
                 {
                     visibleTargets.Add(target);
                     Debug.DrawLine(transform.position, target.position, Color.red);
-                    Debug.Log("Pego");
+                    GetComponent<scrPatrulha>().enabled = false;
+                    GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Sender = this.gameObject;
+                    GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Death = true;
+                    GetComponent<scrFoundPlayer>().enabled = true;
                 }
             }
         }
