@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class scrAudioManager : MonoBehaviour
 {
-    //public AudioSource Music;
+    public AudioSource Music;
     private GameObject [] Effects;
     void Update()
     {
@@ -13,5 +13,6 @@ public class scrAudioManager : MonoBehaviour
         {
             Effects[i].GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("EffectVolum", 1);
         }
+        Music.volume = PlayerPrefs.GetFloat("MusicVolum", 1);
     }
 }

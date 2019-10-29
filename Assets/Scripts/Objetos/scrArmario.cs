@@ -28,6 +28,7 @@ public class scrArmario : MonoBehaviour
 
     public void Animando(){
         Resgatado = false;
+        GetComponentInChildren<AudioSource>().Play();
         GameObject.FindGameObjectWithTag("Achiviment").GetComponent<Animator>().SetBool("Anime-se", true);
     }
 

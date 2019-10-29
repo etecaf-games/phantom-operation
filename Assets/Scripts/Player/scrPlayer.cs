@@ -6,9 +6,9 @@ public class scrPlayer : MonoBehaviour
 {   
     #region Variaveis de Ativação de Luz
 
-    public AudioSource ClickLanterna;
+    public AudioSource ClickLanterna, Passos;
     public int barras;
-    public bool Andando;
+    public bool Andando, Callpassos;
     public bool InputadoLuz;
     public bool Acesa;
     public float couldownIncialLuz;
@@ -62,6 +62,16 @@ public class scrPlayer : MonoBehaviour
 
         if(!(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))){
             Andando = false;
+        }
+        if(Andando){
+            if(!Callpassos){
+                Passos.Play();
+                Callpassos = true;
+            }
+        }
+        else{
+            Passos.Stop();
+            Callpassos = false;
         }
 
         AnimPlayer.SetBool("Andando", Andando);

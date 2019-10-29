@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class scrPatrulha : MonoBehaviour
 {
+	public AudioSource Passos;
 	public float CouldDown;
 	public bool FollowCoin, Andando;
 	bool CoinAt;
 	float Tempo;
 	Rigidbody2D rbEnemy;
-	public bool Mover, FoundEnemy;
-	public float Velocidade;
+	public bool Mover, CallPassos;
+	public float Velocidade, radius;
 	public int Local;
 	public Transform[] posições;
 	scrRotation LookScript;
@@ -32,13 +33,26 @@ public class scrPatrulha : MonoBehaviour
 
     void FixedUpdate()
     {
-		if(!FoundEnemy){
-			if(!FollowCoin){
-				Vector3 LocalDestino = posições[Local].position;
-				Move(LocalDestino);
-				Tempo = CouldDown;
+		if(!FollowCoin){
+			Vector3 LocalDestino = posições[Local].position;
+			Move(LocalDestino);
+			Tempo = CouldDown;
+		}
+		AnimEnemy.SetBool("Andando", Andando);
+		if(Vector2.Distance(transform.position, GameObject.Find("Player").transform.position) < radius){
+			if(Andando){
+				if(!CallPassos){
+					CallPassos = true;
+					Passos.Play();
+				}
 			}
-			AnimEnemy.SetBool("Andando", Andando);
+			else{
+				CallPassos = false;
+				Passos.Stop();
+			}
+		}
+		else{
+			Passos.Stop();
 		}
 	}
 	public void Move(Vector3 Destino){
