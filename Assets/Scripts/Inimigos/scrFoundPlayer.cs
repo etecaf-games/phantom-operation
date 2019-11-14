@@ -7,6 +7,8 @@ public class scrFoundPlayer : MonoBehaviour
     public float z;
     public float DuraçãoRot;
     public float lerp;
+    public AudioSource FoundPlayer;
+    
     float angulo;
     Rigidbody2D rbEnemy;
     scrPatrulha PatrulaScript;
@@ -23,6 +25,9 @@ public class scrFoundPlayer : MonoBehaviour
         PosFut.y -= transform.position.y;
         angulo = Mathf.Atan2(PosFut.y, PosFut.x) * Mathf.Rad2Deg;
         Rotação(angulo);
+        if(float.Parse(angulo.ToString("N4")) == float.Parse(GetComponent<Rigidbody2D>().rotation.ToString("N4")) || float.Parse(angulo.ToString("N4")) == float.Parse(GetComponent<Rigidbody2D>().rotation.ToString("N4")) * -1f){
+            Time.timeScale = 0f;
+        }
     }
 
     public void Rotação(float angulo){

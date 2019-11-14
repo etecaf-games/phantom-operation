@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class scrPauseMenu : MonoBehaviour
 {
+    bool TOFade;
+    public CanvasGroup Fade, Hud;
     public Slider Effect, Musica;
-    public GameObject OptionsPanel, MenuPanel;
+    public GameObject OptionsPanel, MenuPanel, AudioManager, Loading;
     private Animator animTela;
     public bool Ativado, Options;
 
@@ -44,14 +46,26 @@ public class scrPauseMenu : MonoBehaviour
         }
     }
 
+
+    public void LoadMenu(){
+        TOFade = true;
+    }
+
     public void BackMenu(){
         Options = false;
         OptionsPanel.SetActive(false);
         MenuPanel.SetActive(true);
     }
 
-    public void StartMenu(){
-        SceneManager.LoadScene("MenuInicial");
+    IEnumerator carregando()
+    {
+        AsyncOperation operacao = SceneManager.LoadSceneAsync("Menu");
+
+        Loading.SetActive(true);
+        while (!operacao.isDone)
+        {
+            yield return null;
+        }
     }
 
     public void BackGame(){
@@ -79,5 +93,21 @@ public class scrPauseMenu : MonoBehaviour
             }
         }
         animTela.SetBool("Ativado", Ativado);
+
+        if(TOFade){
+            GameObject[] Effects = GameObject.FindGameObjectsWithTag("Effects");
+            for (int i = 0; i < Effects.Length; i++)
+            {
+                Effects[i].GetComponent<AudioSource>().volume -= 0.05f;
+            }
+            AudioManager.GetComponent<scrAudioManager>().enabled = false;
+            AudioManager.GetComponent<AudioSource>().volume -= 0.05f;
+            Hud.interactable = false;
+            Fade.alpha += 0.05f;
+            Time.timeScale = 0f;
+            if(Fade.alpha >= 1){
+                StartCoroutine(carregando());
+            }
+        }
     }
 }

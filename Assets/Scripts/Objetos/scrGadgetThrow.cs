@@ -7,6 +7,10 @@ public class scrGadgetThrow : MonoBehaviour
     Rigidbody2D rbMoeda;
     public float Pausa;
 
+    public AudioSource Bip;
+    public bool CallBip;
+    public float radius;
+
     void Start()
     {
         rbMoeda = GetComponent<Rigidbody2D>();
@@ -15,6 +19,17 @@ public class scrGadgetThrow : MonoBehaviour
     {
     	rbMoeda.drag = Pausa;
         rbMoeda.rotation = 0f;
+
+        if(Vector2.Distance(transform.position, GameObject.Find("Player").transform.position) < radius){
+            if(!CallBip){
+                Bip.Play();
+                CallBip = true;
+            }
+        }
+        else{
+                CallBip = false;
+                Bip.Stop();
+            }
     }
     void OnCollisionEnter2D(Collision2D quem)
     {

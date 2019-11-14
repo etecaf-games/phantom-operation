@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class scrAudioManager : MonoBehaviour
 {
+    public bool Found, Stoped;
     public AudioSource Music;
     private GameObject [] Effects;
     void Update()
     {
-        Effects = GameObject.FindGameObjectsWithTag("Effects");
-        for (int i = 0; i < Effects.Length; i++)
-        {
-            Effects[i].GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("EffectVolum", 1);
+
+        if(!Found){
+            Effects = GameObject.FindGameObjectsWithTag("Effects");
+            for (int i = 0; i < Effects.Length; i++)
+            {
+                Effects[i].GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("EffectVolum", 1);
+            }
+            Music.volume = PlayerPrefs.GetFloat("MusicVolum", 1);
         }
-        Music.volume = PlayerPrefs.GetFloat("MusicVolum", 1);
+        else{
+            Effects = GameObject.FindGameObjectsWithTag("Effects");
+            if(!Stoped){
+                for (int i = 0; i < Effects.Length; i++)
+                {
+                    Effects[i].GetComponent<AudioSource>().Stop();
+                    if(i == Effects.Length - 1){
+                        Stoped = true;
+                    }
+                }
+            }
+        }
     }
 }

@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 6160618274715188492}
   - component: {fileID: 6160618274715188494}
   - component: {fileID: 6160618274715188495}
+  - component: {fileID: 624667187680436739}
   - component: {fileID: 6160618274715188593}
   - component: {fileID: 6160618274715188595}
   - component: {fileID: 6160618274715188594}
@@ -210,10 +211,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadeRot: 20
-  radius: 10
+  radius: 20
   Limites:
   - {fileID: 6160618274819008719}
   - {fileID: 6160618273959903645}
+--- !u!114 &624667187680436739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6160618274715188493}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc125ae0acaa8e14693adead273606d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  z: 0
+  "Dura\xE7\xE3oRot": 3
+  lerp: 0
+  FoundPlayer: {fileID: 0}
+  "DestinoVis\xE3o": 0
 --- !u!50 &6160618274715188593
 Rigidbody2D:
   serializedVersion: 4
@@ -257,8 +275,8 @@ MonoBehaviour:
   Already: 0
   Rotacionando: 0
   TauntVisto: 0
-  viewRadius: 7.5
-  viewAngle: 60
+  viewRadius: 6.5
+  viewAngle: 55
   obstacleMask:
     serializedVersion: 2
     m_Bits: 8192
@@ -303,7 +321,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 7.2928944
+  MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

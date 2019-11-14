@@ -11,6 +11,8 @@ TagManager:
   - Batery
   - Effects
   - DeathManager
+  - Music
+  - Server
   layers:
   - Default
   - TransparentFX

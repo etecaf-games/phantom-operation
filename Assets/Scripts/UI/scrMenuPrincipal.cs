@@ -6,12 +6,16 @@ using UnityEngine;
 
 public class scrMenuPrincipal : MonoBehaviour
 {
-
-    public GameObject MenuPrin, AboutUS, Options;
+    public GameObject MenuPrin, AboutUS, Options, SaveArea;
     public Slider Music, Effect;
 
-    public void StartButton(){
+    void Awake(){
+        Time.timeScale = 1f;
+    }
 
+    public void StartButton(){
+        SaveArea.SetActive(true);
+        MenuPrin.SetActive(false);
     }
 
     public void OptionsMenu(){

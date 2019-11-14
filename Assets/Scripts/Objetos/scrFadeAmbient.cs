@@ -18,7 +18,6 @@ public class scrFadeAmbient : MonoBehaviour
         scriptPlayer = GetComponent<scrPlayer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
     	Condicao = scriptPlayer.Acesa;
@@ -46,8 +45,7 @@ public class scrFadeAmbient : MonoBehaviour
 
         }
         LuzAmbient.color = Color.Lerp(Claridades[0], Claridades[1], taxaTransicao);
-        LuzFOVPlayer.SetActive(false);
-        taxaTransicao += 0.05f;
+        taxaTransicao += 0.09f;
 
     }
 
@@ -58,8 +56,7 @@ public class scrFadeAmbient : MonoBehaviour
             CancelInvoke("Clarear");
         }
         LuzAmbient.color = Color.Lerp(Claridades[1], Claridades[0], taxaTransicao);
-        LuzFOVPlayer.SetActive(true);
-        taxaTransicao += 0.05f;
+        taxaTransicao += 0.09f;
     }
 
     public void fadeIn()

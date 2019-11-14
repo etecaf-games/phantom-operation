@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class ScrFOV : MonoBehaviour
@@ -66,7 +65,10 @@ public class ScrFOV : MonoBehaviour
                 {
                     visibleTargets.Add(target);
                     Debug.DrawLine(transform.position, target.position, Color.red);
-                    GetComponent<scrPatrulha>().enabled = false;
+                    if(GetComponent<scrPatrulha>() != null){
+                        GetComponent<scrPatrulha>().FoundPlayer = true;
+                        GetComponent<scrPatrulha>().enabled = false;
+                    }
                     GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Sender = this.gameObject;
                     GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Death = true;
                     GetComponent<scrFoundPlayer>().enabled = true;

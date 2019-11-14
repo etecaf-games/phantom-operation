@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class scrArmario : MonoBehaviour
 {
+    public GameObject Elevator;
     public bool Entrou, Resgatado, Animado;
     Animator animArmario;
 
@@ -14,6 +15,7 @@ public class scrArmario : MonoBehaviour
     void FixedUpdate()
     {
         if(Input.GetKeyDown(KeyCode.E) && Entrou && !Animado){
+            Elevator.GetComponent<scrElevator>().GotIt = true;
             Resgatado = true;
             Animado = true;
         }

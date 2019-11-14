@@ -26,6 +26,5 @@ public class scrOptionsPrincipal : MonoBehaviour
             PlayerPrefs.SetFloat("EffectVolum", Effect.value);
         }
         Test.volume = Effect.value;
-        Test.Play();
     }
 }

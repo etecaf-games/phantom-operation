@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class scrPatrulha : MonoBehaviour
 {
-	public AudioSource Passos;
+	public AudioSource Passos, FoundSound;
 	public float CouldDown;
-	public bool FollowCoin, Andando;
+	public bool FollowCoin, Andando, FoundPlayer;
 	bool CoinAt;
 	float Tempo;
 	Rigidbody2D rbEnemy;
@@ -38,21 +38,30 @@ public class scrPatrulha : MonoBehaviour
 			Move(LocalDestino);
 			Tempo = CouldDown;
 		}
+		if(Vector2.Distance(GameObject.Find("Player").transform.position, transform.position) <= 1){
+            GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Sender = this.gameObject;
+            GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Death = true;
+            GetComponent<scrFoundPlayer>().enabled = true;
+            GetComponent<scrPatrulha>().FoundPlayer = true;
+            GetComponent<scrPatrulha>().enabled = false;
+		}
 		AnimEnemy.SetBool("Andando", Andando);
-		if(Vector2.Distance(transform.position, GameObject.Find("Player").transform.position) < radius){
-			if(Andando){
-				if(!CallPassos){
-					CallPassos = true;
-					Passos.Play();
+		if(!FoundPlayer){
+			if(Vector2.Distance(transform.position, GameObject.Find("Player").transform.position) < radius){
+				if(Andando){
+					if(!CallPassos){
+						CallPassos = true;
+						Passos.Play();
+					}
+				}
+				else{
+					CallPassos = false;
+					Passos.Stop();
 				}
 			}
 			else{
-				CallPassos = false;
 				Passos.Stop();
 			}
-		}
-		else{
-			Passos.Stop();
 		}
 	}
 	public void Move(Vector3 Destino){

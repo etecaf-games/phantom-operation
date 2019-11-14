@@ -13,6 +13,11 @@ public class scrInterfaceItens : MonoBehaviour
 	public GameObject Moeda, Gadget;
 	public GameObject Incio;
 	public int Moedas, Gadgets;
+    void Start(){
+        Moedas = PlayerPrefs.GetInt("Moedas", 0);
+        Gadgets = PlayerPrefs.GetInt("Gadgets", 0);
+    }
+
     void FixedUpdate()
     {
     	target = cam.transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));

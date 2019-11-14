@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class scrBatery : MonoBehaviour
 {
-    void OnCollisionEnter2D(Collision2D quem)
+    void OnTriggerEnter2D(Collider2D quem)
     {
         if(quem.gameObject.tag == "Player"){
         	if(quem.gameObject.GetComponent<scrPlayer>().barras <= 4){

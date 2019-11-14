@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class scrChat : MonoBehaviour
 {
+    public AudioSource Tap;
+    public Animator Falando;
 	public float delay = 0.1f, delayProx = 2f;
 	public string[] Texto;
 	public  bool digitando = true;
@@ -35,8 +37,14 @@ public class scrChat : MonoBehaviour
     	for(int i = 0; i < Texto[indice].Length + 1; i++){
     		LetraType = Texto[indice].Substring(0,i);
     		this.GetComponent<TextMeshProUGUI>().text = LetraType;
+            Tap.Play();
     		yield return new WaitForSeconds(delay);
+            if(Input.GetButton("Jump")){
+                i = Texto[indice].Length - 2; 
+            }
+            Falando.SetBool("Talking", true);
     	}
+        Falando.SetBool("Talking", false);
     	yield return new WaitForSeconds(delayProx);
     	digitando = false;
     }
