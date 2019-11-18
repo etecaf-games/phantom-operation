@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class scrMoedas : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class scrMoedas : MonoBehaviour
     	{
 			Pick.Play();
     		quem.gameObject.GetComponent<scrInterfaceItens>().Moedas++;
+			GameObject.FindGameObjectWithTag("Achiviment").GetComponentInChildren<TextMeshProUGUI>().text = "Voce consegiu uma moeda";
+			GameObject.FindGameObjectWithTag("Achiviment").GetComponent<Animator>().SetBool("Anime-se", true);	
     		Destroy(gameObject);
     	}
     }

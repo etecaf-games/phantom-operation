@@ -10,7 +10,7 @@ public class scrPatrulha : MonoBehaviour
 	bool CoinAt;
 	float Tempo;
 	Rigidbody2D rbEnemy;
-	public bool Mover, CallPassos;
+	public bool Mover, CallPassos, LastLevel;
 	public float Velocidade, radius;
 	public int Local;
 	public Transform[] posições;
@@ -74,16 +74,27 @@ public class scrPatrulha : MonoBehaviour
 			Andando = true;
 		}
 		if(Mover){
-			LookScript.lerp = 0f;
-			if(Local >= posições.Length - 1f){
-				Local = 0;
+			if(!LastLevel){
+				LookScript.lerp = 0f;
+				if(Local >= posições.Length - 1f){
+					Local = 0;
+				}
+				else{
+					Local++;
+				}
+				Mover = false;
+				
 			}
 			else{
-				Local++;
+				LookScript.lerp = 0f;
+				if(Local >= posições.Length - 2f){
+					GetComponent<scrPatrulha>().enabled = false;
+				}
+				else{
+					Local++;
+				}
+				Mover = false;
 			}
-			Mover = false;
 		}
-	}
-
-	
+	}	
 }

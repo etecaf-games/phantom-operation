@@ -5,13 +5,14 @@ using UnityEngine;
 public class scrDriver : MonoBehaviour
 {
 	public GameObject Player, Exclamacao;
-
+    public AudioSource Achiviment;
 	public bool entrou, GetIt, Called;
 
     void FixedUpdate()
     {
         if(entrou && Input.GetKey(KeyCode.E) && !Called){
         	GameObject b = Instantiate(Exclamacao) as GameObject;
+            Achiviment.Play();
         	b.transform.position = Player.transform.position;
         	b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
         	GetIt = true;

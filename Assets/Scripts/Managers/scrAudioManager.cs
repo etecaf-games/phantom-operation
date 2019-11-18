@@ -23,7 +23,7 @@ public class scrAudioManager : MonoBehaviour
             if(!Stoped){
                 for (int i = 0; i < Effects.Length; i++)
                 {
-                    Effects[i].GetComponent<AudioSource>().Stop();
+                    Effects[i].GetComponent<AudioSource>().mute = true;
                     if(i == Effects.Length - 1){
                         Stoped = true;
                     }
