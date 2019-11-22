@@ -58,6 +58,8 @@ public class scrSavePainel : MonoBehaviour
         PlayerPrefs.DeleteKey("Tutorial" + 2 + NomeIndice);
         PlayerPrefs.DeleteKey("Tutorial" + 3 + NomeIndice);
         PlayerPrefs.DeleteKey("Tutorial" + 4 + NomeIndice);
+        PlayerPrefs.DeleteKey("Tutorial" + 5 + NomeIndice);
+        PlayerPrefs.DeleteKey("Tutorial" + 6 + NomeIndice);
         Respectivo.SetActive(true);
         Respectivo.GetComponent<srcSavePainelNewGame>().Fase.text = PlayerPrefs.GetString("NamePhaseOf" + NomeIndice, "None");
         Respectivo.GetComponent<srcSavePainelNewGame>().Moedas.text = "Coins: " + PlayerPrefs.GetInt("IndexCoinsOf" + NomeIndice, 0);

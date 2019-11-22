@@ -6,6 +6,6 @@ public class scrInitialFade : MonoBehaviour
 {
     void Update()
     {
-        GetComponent<CanvasGroup>().alpha -= 0.02f;
+        GetComponent<CanvasGroup>().alpha -= 0.008f;
     }
 }

@@ -30,7 +30,7 @@ public class scrServerManager : MonoBehaviour
 				}
 			}
 		}
-		if(GetComponentInChildren<Slider>().maxValue == GetComponentInChildren<Slider>().value && !Acabou && !Over){
+		if(0 == GetComponentInChildren<Slider>().value && !Acabou && !Over){
 			AcabouOTempo = true;
 			Over = true;
 			GameObject.Find("MenuPause").GetComponent<scrPauseMenu>().enabled = false;
@@ -47,7 +47,7 @@ public class scrServerManager : MonoBehaviour
     }
 
 	IEnumerator Wait(){
-		yield return new WaitForSeconds(12f);
+		yield return new WaitForSeconds(7f);
 		GameObject.Find("DeathManager").GetComponent<scrDeathManager>().Death = true;
 	}
 }

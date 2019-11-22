@@ -10,7 +10,7 @@ public class scrElevator : MonoBehaviour
 	public string NextLevel, NomeIndice;
 	public float FadeIn;
 	public GameObject Fade, AudioManager, Loading;
-	public bool GotIt, CallUnActiveHours;
+	public bool GotIt, CallUnActiveHours, Called;
 	int coins, barras;
 	void Update(){
 		if(GotIt){
@@ -43,7 +43,8 @@ public class scrElevator : MonoBehaviour
 			CallUnActiveHours = true;
 		}
 		AudioManager.GetComponent<AudioSource>().volume -= FadeIn;
-		if(Fade.GetComponent<CanvasGroup>().alpha >= 1f){
+		if(Fade.GetComponent<CanvasGroup>().alpha >= 1f && !Called){
+			Called = true;
 			NomeIndice = GameObject.Find("LevelManager").GetComponent<scrLevelManager>().NomeIndice;
 			PlayerPrefs.DeleteKey("NamePhaseOf" + NomeIndice);
             PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, NextLevel);

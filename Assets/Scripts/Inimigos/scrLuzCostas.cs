@@ -72,9 +72,6 @@ public class scrLuzCostas : MonoBehaviour
                 GetComponent<scrRotation>().enabled = false;
                 AlreadyAcesa = true;    
                 if(rodado){
-                    if(Vector2.Distance(transform.position, target.position) <= 0.5f){
-                        Debug.Log("PARADEBUGARGAY");
-                    }
                     if(Tempo <= 0){
                         int DestinoVisão = GetComponent<scrRotation>().DestinoVisão;
                         PosFut = GetComponent<scrPatrulha>().posições[DestinoVisão].position;

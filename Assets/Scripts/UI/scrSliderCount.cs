@@ -8,7 +8,7 @@ public class scrSliderCount : MonoBehaviour
     void FixedUpdate()
     {
         if(!GetComponentInParent<scrServerManager>().Acabou){
-            GetComponent<Slider>().value += Time.deltaTime;
+            GetComponent<Slider>().value -= Time.deltaTime;
         }
     }
 }

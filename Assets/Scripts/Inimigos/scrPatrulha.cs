@@ -38,7 +38,7 @@ public class scrPatrulha : MonoBehaviour
 			Move(LocalDestino);
 			Tempo = CouldDown;
 		}
-		if(Vector2.Distance(GameObject.Find("Player").transform.position, transform.position) <= 1){
+		if(Vector2.Distance(GameObject.Find("Player").transform.position, transform.position) <= 3f){
             GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Sender = this.gameObject;
             GameObject.FindGameObjectWithTag("DeathManager").GetComponent<scrDeathManager>().Death = true;
             GetComponent<scrFoundPlayer>().enabled = true;

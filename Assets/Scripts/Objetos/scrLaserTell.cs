@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class scrLaserTell : MonoBehaviour
@@ -22,6 +23,7 @@ public class scrLaserTell : MonoBehaviour
 
             GameObject b = Instantiate(Timer, new Vector3(-461.8802f, -259.8076f, 0), Quaternion.identity);
             b.GetComponentInChildren<scrSliderCount>().enabled = false;
+            b.GetComponentInChildren<Slider>().value = 80;
             b.transform.SetParent(Canvas.transform ,false);
             b.GetComponent<scrServerManager>().Enemys = enmys;
             b.GetComponent<scrServerManager>().EnmyPrin = enmyPrin;

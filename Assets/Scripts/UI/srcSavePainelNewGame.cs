@@ -40,10 +40,10 @@ public class srcSavePainelNewGame : MonoBehaviour
             }
             if(PlayerPrefs.HasKey("NamePhaseOf" + NomeIndice)){
                 PlayerPrefs.DeleteKey("NamePhaseOf" + NomeIndice);
-                PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, "Level 1");
+                PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, "1º Andar");
             }
             else{
-                PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, "Level 1");
+                PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, "1º Andar");
             }
             if(PlayerPrefs.HasKey("IndexCoinsOf" + NomeIndice)){
                 PlayerPrefs.DeleteKey("IndexCoinsOf" + NomeIndice);
@@ -73,6 +73,12 @@ public class srcSavePainelNewGame : MonoBehaviour
             }
             if(PlayerPrefs.HasKey("Tutorial" + 4 + NomeIndice)){
                 PlayerPrefs.DeleteKey("Tutorial" + 4 + NomeIndice);
+            }
+            if(PlayerPrefs.HasKey("Tutorial" + 5 + NomeIndice)){
+                PlayerPrefs.DeleteKey("Tutorial" + 5 + NomeIndice);
+            }
+            if(PlayerPrefs.HasKey("Tutorial" + 6 + NomeIndice)){
+                PlayerPrefs.DeleteKey("Tutorial" + 6 + NomeIndice);
             }
             StartCoroutine(carregando());
         }
