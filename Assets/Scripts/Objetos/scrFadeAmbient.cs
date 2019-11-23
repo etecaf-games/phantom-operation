@@ -45,7 +45,7 @@ public class scrFadeAmbient : MonoBehaviour
 
         }
         LuzAmbient.color = Color.Lerp(Claridades[0], Claridades[1], taxaTransicao);
-        taxaTransicao += 0.009f;
+        taxaTransicao += 0.01f;
 
     }
 

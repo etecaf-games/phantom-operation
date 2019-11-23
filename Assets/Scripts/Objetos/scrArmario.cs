@@ -34,7 +34,7 @@ public class scrArmario : MonoBehaviour
     public void Animando(){
         Resgatado = false;
         GetComponentInChildren<AudioSource>().Play();
-        GameObject.FindGameObjectWithTag("Achiviment").GetComponentInChildren<TextMeshProUGUI>().text = "Você conseguiu um codigo";
+        GameObject.FindGameObjectWithTag("Achiviment").GetComponentInChildren<TextMeshProUGUI>().text = "Você conseguiu um código!";
         GameObject.FindGameObjectWithTag("Achiviment").GetComponent<Animator>().SetBool("Anime-se", true);
     }
 
