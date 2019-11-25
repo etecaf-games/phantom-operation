@@ -40,10 +40,10 @@ public class srcSavePainelNewGame : MonoBehaviour
             }
             if(PlayerPrefs.HasKey("NamePhaseOf" + NomeIndice)){
                 PlayerPrefs.DeleteKey("NamePhaseOf" + NomeIndice);
-                PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, "1º Andar");
+                PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, "CutScene1");
             }
             else{
-                PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, "1º Andar");
+                PlayerPrefs.SetString("NamePhaseOf" + NomeIndice, "CutScene1");
             }
             if(PlayerPrefs.HasKey("IndexCoinsOf" + NomeIndice)){
                 PlayerPrefs.DeleteKey("IndexCoinsOf" + NomeIndice);
