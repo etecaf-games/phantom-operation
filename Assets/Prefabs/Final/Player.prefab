@@ -434,7 +434,7 @@ MonoBehaviour:
   Acesa: 1
   couldownIncialLuz: 0.2
   couldownLuz: 0
-  "Dura\xE7\xE3oLuz": 30
+  "Dura\xE7\xE3oLuz": 25
   TempoLuz: 0
   Lanterna: {fileID: 3694275879084617504}
   Velocidade: 4.5
@@ -486,7 +486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Claridades:
   - {r: 1, g: 1, b: 1, a: 0.03529412}
-  - {r: 1, g: 1, b: 1, a: 0.19607843}
+  - {r: 1, g: 1, b: 1, a: 0.1764706}
   LuzAmbient: {fileID: 0}
   LuzFOVPlayer: {fileID: 0}
   taxaTransicao: 0

@@ -5,10 +5,10 @@ using UnityEngine;
 public class scrTutorialManager : MonoBehaviour
 {
 	public int LvlTutorial;
-	public bool NeedFollowOfIndex;
+	public bool NeedFollowOfIndex, Item1, Item2;
 	public int Index;
 	public string[] Chat;
-	public GameObject Follower, Follow, Player, BallonChat, Canvas;
+	public GameObject Follower, Follow, Player, BallonChat, Canvas, Iten1, Iten2;
 	GameObject b;
 
 	void Start(){
@@ -35,8 +35,18 @@ public class scrTutorialManager : MonoBehaviour
 	}
 
 	void InstacieOBalão(){
-		b = Instantiate(BallonChat, new Vector3(40, 80, 0), Quaternion.identity) as GameObject;
+		b = Instantiate(BallonChat, new Vector3(0, 80, 0), Quaternion.identity) as GameObject;
 		b.transform.SetParent(Canvas.transform ,false);
+		if(Item1){
+			Iten1.SetActive(false);
+			b.GetComponent<scrDeletBalon>().Item1 = true;
+			b.GetComponent<scrDeletBalon>().Iten1 = Iten1;	
+		}
+		if(Item2){
+			Iten2.SetActive(false);
+			b.GetComponent<scrDeletBalon>().Item2 = true;
+			b.GetComponent<scrDeletBalon>().Iten2 = Iten2;
+		}
 		b.GetComponentInChildren<scrChat>().Texto = Chat;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, 0.0f);
         InvokeRepeating("AskFollow", 0.02f, 0.03f);
