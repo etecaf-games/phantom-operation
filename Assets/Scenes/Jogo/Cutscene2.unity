@@ -120,6 +120,85 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &50290184
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4516844368094476529, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516844368094476528, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281889116679773900, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281889116679773900, guid: 86b82794070ec9043b3aef471497b764,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ac5d137337f415c4290866b0b9cbe079, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 86b82794070ec9043b3aef471497b764, type: 3}
 --- !u!1 &70914600
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b753eb61164c4c43ab0dd872f62fa56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Musica: {fileID: 2001294559}
   Fade: {fileID: 2031622174}
   Chat: {fileID: 8280369547582415924}
   Credits: {fileID: 191359463}
@@ -305,8 +385,8 @@ MonoBehaviour:
     Vitorino Felix\n\nConcept\n\nBreno Gabriel Guedes da Silva\nLucas Freitas de Melo\n\nSoundTrack\n\nJo\xE3o
     Vitcor Mariano de Oliveira\n\nDesevolvimento\n\nLucas Freitas de Melo\nKa\xEDque
     Marinho Gestoso\n\nDivulga\xE7\xE3o\n\nGuilherme Silva de Jesus\n\nAgradecimentos\n\nDebora
-    Linda Eduarda\nAndr\xE9 Reis\nCristiano Arco e Flexa Machado\nDanilo dos Santos
-    Bezerra\nFrederico Arco e Flexa Machado Justo\nMaristela Gamba"
+    Linda Eduarda\nAndr\xE9 Luis Reis Santos\nCristiano Arco e Flexa Machado\nDanilo
+    dos Santos Bezerra\nFrederico Arco e Flexa Machado Justo\nMaristela Carvalho Gamba"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cd91780817aff8d4da1a26ac49667556, type: 2}
   m_sharedMaterial: {fileID: -2793597529949824784, guid: cd91780817aff8d4da1a26ac49667556,
@@ -1294,6 +1374,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872662014}
   m_CullTransparentMesh: 0
+--- !u!82 &2001294559 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2281889116679773900, guid: 86b82794070ec9043b3aef471497b764,
+    type: 3}
+  m_PrefabInstance: {fileID: 50290184}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2031622169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,6 +1432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87c66fa8d2e87c54b8349093bb977ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delete: 0
 --- !u!114 &2031622172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1722,17 +1809,19 @@ MonoBehaviour:
   delay: 0.05
   delayProx: 2.3
   Texto:
-  - "Boa noite, bem vindo ao Notici\xE1rio Urgente."
-  - "Acabam de chegar informa\xE7\xF5es sobre o caso dos Terroristas, que roubaram
-    c\xF3digos secretos militares."
-  - "O lan\xE7amento dos m\xEDsseis nucleares foi interceptado!"
+  - "Boa noite, est\xE1 come\xE7ando o Notici\xE1rio Urgente."
+  - "Acabam de chegar mais informa\xE7\xF5es sobre o caso da organiza\xE7\xE3o Terrorista,
+    que roubaram c\xF3digos secretos militares."
+  - "Gra\xE7as a uma opera\xE7\xE3o ordenada pela CIA, o  lan\xE7amento dos m\xEDsseis
+    nucleares foram interceptados com sucesso!"
   - "Todos os c\xF3digos foram recuperados e os terroristas foram apreendidos."
-  - "Os militares tomar\xE3o provid\xEAncias sobre o ocorrido, ir\xE3o deixar os c\xF3digos
-    mais seguros, ou se n\xE3o haver\xE1 mais m\xEDsseis nucleares."
-  - "Afinal, por um lado se proteger de amea\xE7as mesmo esses m\xEDsseis comprometendo
-    mais ainda o pa\xEDs, "
-  - "ou, deixar de lado essa hist\xF3ria de m\xEDsseis nucleares de uma vez por todas. "
-  - "Essas s\xE3o as not\xEDcias da noite. Tenham um bom descanso!"
+  - "A CIA tomar\xE1 provid\xEAncias sobre o ocorrido, quanto aos c\xF3digos, os mesmos
+    ter\xE3o uma seguran\xE7a ainda mais rigosa."
+  - "Ainda n\xE3o se sabe como os terroristas tiveram acesso \xE0 c\xF3digos t\xE3o
+    seguros assim"
+  - "a CIA declarou uma nota onde suspeita-se de inimigos infiltrados, por\xE9m nada
+    concreto, os ataques ainda s\xE3o um mist\xE9rio."
+  - Este foi o jornal urgente, uma boa noite a todos!
   - Obrigado por terem jogado nosso jogo, nos veremos em breve.
   digitando: 1
   indice: 0

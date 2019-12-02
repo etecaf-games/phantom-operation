@@ -87,7 +87,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
 --- !u!33 &149290690377900952
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -417,7 +417,7 @@ MonoBehaviour:
   "Dura\xE7\xE3oRot": 6
   lerp: 0
   Couldown: 5
-  viewRadius: 4.5
+  viewRadius: 5.15
   viewAngle: 360
   obstacleMask:
     serializedVersion: 2
@@ -626,7 +626,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
 --- !u!33 &1465613300204146426
 MeshFilter:
   m_ObjectHideFlags: 0

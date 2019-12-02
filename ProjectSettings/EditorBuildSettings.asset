@@ -27,16 +27,13 @@ EditorBuildSettings:
     path: "Assets/Scenes/Jogo/4\xBA Andar.unity"
     guid: d95997240b28cc24798c793f2b8e4dc4
   - enabled: 1
-    path: "Assets/Scenes/Jogo/5\xBA Andar.unity"
+    path: "Assets/Scenes/Jogo/6\xBA Andar.unity"
     guid: 3ff539565d29a674fba63f696703c444
   - enabled: 1
-    path: "Assets/Scenes/Jogo/6\xBA Andar.unity"
+    path: "Assets/Scenes/Jogo/5\xBA Andar.unity"
     guid: 923ec629072d8414294c61a0ccc6e5b4
   - enabled: 1
     path: "Assets/Scenes/Jogo/7\xBA Andar.unity"
-    guid: e34bae1a1d1f989408da099df427cf2a
-  - enabled: 1
-    path: "Assets/Scenes/Jogo/8\xBA Andar.unity"
     guid: 3359301cfb037fd438995db22908213c
   - enabled: 1
     path: Assets/Scenes/Jogo/Cutscene2.unity

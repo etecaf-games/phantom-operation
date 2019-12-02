@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  Exclamacao: {fileID: 6311429675315971623, guid: 057eea429b412c243b256823b77d0e50,
+  Exclamacao: {fileID: 4637140624874741275, guid: c9f8404dffab4fe4ca084d8f84a6b8f1,
     type: 3}
   Achiviment: {fileID: 3897742637611067589}
   entrou: 0

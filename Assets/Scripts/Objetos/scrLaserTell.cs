@@ -33,7 +33,7 @@ public class scrLaserTell : MonoBehaviour
             b.GetComponent<scrServerManager>().Loading = load;
 
 
-            GameObject a = Instantiate(Chat, new Vector3(40, 80, 0), Quaternion.identity) as GameObject;
+            GameObject a = Instantiate(Chat, new Vector3(0, 80, 0), Quaternion.identity) as GameObject;
             a.transform.SetParent(Canvas.transform ,false);
             a.GetComponent<scrDeletBalon>().Instaciado = true;
             a.GetComponent<scrDeletBalon>().LastLevel = true;

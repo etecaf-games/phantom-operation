@@ -14,8 +14,6 @@ public class scrInterfaceItens : MonoBehaviour
 	public GameObject Incio;
 	public int Moedas, Gadgets;
     void Start(){
-        Moedas = PlayerPrefs.GetInt("Moedas", 0);
-        Gadgets = PlayerPrefs.GetInt("Gadgets", 0);
     }
 
     void FixedUpdate()
@@ -34,7 +32,7 @@ public class scrInterfaceItens : MonoBehaviour
             fireCoin(direction, rotationZ);
             Moedas--;	
         }
-        if(Input.GetButtonDown("Fire2") && Gadgets >= 1 && tempo <= 0){
+        if(Input.GetButtonDown("Fire2") && Gadgets >= 1){
             tempo = Couldown;
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;

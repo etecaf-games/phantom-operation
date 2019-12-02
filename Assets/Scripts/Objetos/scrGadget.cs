@@ -10,7 +10,7 @@ public class scrGadget : MonoBehaviour
     	if(quem.gameObject.tag == "Player")
     	{
     		quem.gameObject.GetComponent<scrInterfaceItens>().Gadgets++;
-			GameObject.FindGameObjectWithTag("Achiviment").GetComponentInChildren<TextMeshProUGUI>().text = "Voce consegiu um Gadget";
+			GameObject.FindGameObjectWithTag("Achiviment").GetComponentInChildren<TextMeshProUGUI>().text = "Você consegiu um dispositivo!";
 			GameObject.FindGameObjectWithTag("Achiviment").GetComponent<Animator>().SetBool("Anime-se", true);	
     		Destroy(gameObject);
     	}

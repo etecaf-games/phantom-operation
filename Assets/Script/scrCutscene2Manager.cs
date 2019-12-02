@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class scrCutscene2Manager : MonoBehaviour
 {
+    public AudioSource Musica;
 	public CanvasGroup Fade;
     public GameObject Chat, Credits;
     public bool Call1, Call2;
@@ -23,6 +24,7 @@ public class scrCutscene2Manager : MonoBehaviour
             Fade.alpha += 0.008f;
             if (Fade.alpha == 1) {
                 Call2 = true;
+                Musica.Play();
                 Credits.SetActive(true);
             }
         }

@@ -80,6 +80,12 @@ public class srcSavePainelNewGame : MonoBehaviour
             if(PlayerPrefs.HasKey("Tutorial" + 6 + NomeIndice)){
                 PlayerPrefs.DeleteKey("Tutorial" + 6 + NomeIndice);
             }
+            if(PlayerPrefs.HasKey("Tutorial" + 7 + NomeIndice)){
+                PlayerPrefs.DeleteKey("Tutorial" + 7 + NomeIndice);
+            }
+            if(PlayerPrefs.HasKey("Tutorial" + 8 + NomeIndice)){
+                PlayerPrefs.DeleteKey("Tutorial" + 8 + NomeIndice);
+            }
             StartCoroutine(carregando());
         }
         else{
