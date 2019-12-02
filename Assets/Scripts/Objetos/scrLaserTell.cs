@@ -7,7 +7,7 @@ public class scrLaserTell : MonoBehaviour
 {
     public AudioSource Destivado;
     public string[] Dialogs;
-    public GameObject Chat, Timer, Canvas, Follower, enmys, enmyPrin;
+    public GameObject Chat, Timer, Canvas, Follower, enmys, enmyPrin, Fade, load;
     void OnTriggerEnter2D(Collider2D quem){
         if(quem.gameObject.tag == "Player"){
 
@@ -27,6 +27,10 @@ public class scrLaserTell : MonoBehaviour
             b.transform.SetParent(Canvas.transform ,false);
             b.GetComponent<scrServerManager>().Enemys = enmys;
             b.GetComponent<scrServerManager>().EnmyPrin = enmyPrin;
+            b.GetComponent<scrServerManager>().Canvas = Canvas;
+            b.GetComponent<scrServerManager>().Chat = Chat;
+            b.GetComponent<scrServerManager>().Fade = Fade;
+            b.GetComponent<scrServerManager>().Loading = load;
 
 
             GameObject a = Instantiate(Chat, new Vector3(40, 80, 0), Quaternion.identity) as GameObject;

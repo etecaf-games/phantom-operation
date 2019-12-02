@@ -380,7 +380,7 @@ RectTransform:
   m_GameObject: {fileID: 8076602462417353212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.93, y: 0.93, z: 0.93}
   m_Children:
   - {fileID: 8076602461922473459}
   - {fileID: 8076602462876267793}
@@ -443,8 +443,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Instaciado: 0
   LastLevel: 0
+  Item1: 0
+  Item2: 0
   Follower: {fileID: 0}
   Player: {fileID: 0}
+  Iten1: {fileID: 0}
+  Iten2: {fileID: 0}
 --- !u!95 &8076602462417353186
 Animator:
   serializedVersion: 3

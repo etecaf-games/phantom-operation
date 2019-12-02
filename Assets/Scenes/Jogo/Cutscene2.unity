@@ -1722,8 +1722,18 @@ MonoBehaviour:
   delay: 0.05
   delayProx: 2.3
   Texto:
-  - 'Boa noite, sejam bem vindos ao Jornal Lanroj! '
-  - pogowalk
+  - "Boa noite, bem vindo ao Notici\xE1rio Urgente."
+  - "Acabam de chegar informa\xE7\xF5es sobre o caso dos Terroristas, que roubaram
+    c\xF3digos secretos militares."
+  - "O lan\xE7amento dos m\xEDsseis nucleares foi interceptado!"
+  - "Todos os c\xF3digos foram recuperados e os terroristas foram apreendidos."
+  - "Os militares tomar\xE3o provid\xEAncias sobre o ocorrido, ir\xE3o deixar os c\xF3digos
+    mais seguros, ou se n\xE3o haver\xE1 mais m\xEDsseis nucleares."
+  - "Afinal, por um lado se proteger de amea\xE7as mesmo esses m\xEDsseis comprometendo
+    mais ainda o pa\xEDs, "
+  - "ou, deixar de lado essa hist\xF3ria de m\xEDsseis nucleares de uma vez por todas. "
+  - "Essas s\xE3o as not\xEDcias da noite. Tenham um bom descanso!"
+  - Obrigado por terem jogado nosso jogo, nos veremos em breve.
   digitando: 1
   indice: 0
 --- !u!222 &8280369545997051961
